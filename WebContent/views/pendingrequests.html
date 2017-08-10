@@ -1,0 +1,11 @@
+<div class="container">
+	<table class="table">
+
+		<tr ng-repeat="pr in listOfPendingRequests">
+			<td>{{pr.fromId}}</td>
+			<td><img src="http://localhost:9005/backend_project2/getimage/{{pr.fromId}}" height="50" width="50"/></td>
+			<td><a href="" ng-click="updatePendingRequest(pr.fromId,'A')" class="btn btn-default">Accept</a></td>
+			<td><a href="" ng-click="updatePendingRequest(pr.fromId,'D')" class="btn btn-default">Reject</a></td>
+		</tr>
+	</table>
+</div>

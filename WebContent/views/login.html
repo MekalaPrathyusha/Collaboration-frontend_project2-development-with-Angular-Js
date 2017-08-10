@@ -1,0 +1,14 @@
+<div>
+{{registrationSuccess}}
+	{{message}} {{error.message}}
+	<form name="loginForm" novalidate>
+		Enter Username <input type="text" name="username" ng-model="user.username" required><br>
+		<p ng-show="loginForm.username.$invalid && loginForm.username.$dirty" style="color:red">Username cannot be blank</p>
+		
+		Enter Password <input type="password" name="password" ng-model="user.password" required><br>
+		<p ng-show="loginForm.password.$invalid && loginForm.username.$dirty" style="color:red">Password cannot be blank</p>
+		
+		<input type="submit" value="login" ng-disabled="loginForm.$invalid" ng-click="login()">
+
+	</form>
+</div>

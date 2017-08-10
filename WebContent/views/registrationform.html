@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="css/registrationform.css">
+<body>
+<span style="color:red">{{error.message}}</span>
+
+<div class="center-container">
+	<!--header-->
+	<div class="header-w3l">
+		<h1>Online Login Form</h1>
+	</div>
+	<!--//header-->
+	<div class="main-content-agile">
+		<div class="sub-main-w3">	
+			<div class="wthree-pro">
+				<h2>Login Quick</h2>
+			</div>
+	  <form action="#" method="post">
+	  
+			<div class="pom-agile">
+				<input placeholder="Firstname" name="Firstname" ng-model="user.firstname" type="firstname" required=""><br>
+			
+				<input placeholder="Lastname" name="Lastname" ng-model="user.lastname" type="lastname" required=""><br>
+			
+				<input placeholder="E-mail" name="Name" ng-model="user.email" type="email" required=""><br>
+			
+				<input placeholder="Username" name="Username" ng-model="user.username" type="username" required=""><br>
+			
+				<input placeholder="Password" name="Password" ng-model="user.password" type="password" required=""><br>
+			
+			
+			 	<label class="radio-inline" style="color:#fff"><p align="left">Select Role</p><br>
+					<input type="radio" ng-model="user.role" value="Student" class="light">Student<br>
+					<input type="radio" ng-model="user.role" value="Alumini" class="light">Alumini<br>
+					<input type="radio" ng-model="user.role" value="Employee" class="light">Employee<br><br>
+				</label> 
+			</div>
+			
+			<div class="make wow shake">
+				<input type="submit" ng-click="register()" value="Register"><br>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+</body> 

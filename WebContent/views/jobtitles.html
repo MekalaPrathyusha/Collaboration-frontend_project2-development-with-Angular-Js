@@ -1,0 +1,29 @@
+<div>
+
+Search By Title <input ng-model="searchText.title">
+Search By Author <input ng-model="searchText.author">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Job Title</th>
+				<th>Posted On</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="j in jobs | filter:jobTitle ">
+				<td><a href="" ng-click="getJobDetail(j.id)">{{j.jobTitle}}</a></td><td>{{j.postedOn | date:'yyyy:MM:dd'}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div ng-show="showdetails">
+	<b>Job Details</b><br>
+	<b>Job title :</b> {{job.jobTitle}}<br>
+	<b>Job Description :</b> {{job.jobDescription}}<br>
+	<b>Skills Required :</b> {{job.skillsRequired}}<br>
+	<b>Yrs of Experience :</b> {{job.yrsOfExp}}<br>
+	<b>Location :</b> {{job.location}}<br>
+	<b>Salary :</b> {{job.salary}}<br>
+	<b>Company Name :</b> {{job.companyName}}<br>
+	</div>
+</div>

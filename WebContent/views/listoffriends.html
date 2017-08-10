@@ -1,0 +1,20 @@
+<div>
+	List Of Friends
+	<table>
+
+	  <tr ng-repeat="f in friendsList">
+		 <td ng-hide="currentUser.username==f.fromId">{{f.fromId}}</td>
+		 <td ng-hide="currentUser.username==f.toId">{{f.toId}}</td>
+			
+		 <td ng-hide="currentUser.username==f.fromId">
+			<img src="http://localhost:9005/backend_project2/getimage/{{f.fromId}}" alt="Image Not Available" width="30px" height="30px" class="img-rounded">
+		 </td>
+		 
+		 <td ng-hide="currentUser.username==f.toId">
+			<img src="http://localhost:9005/backend_project2/getimage/{{f.toId}}" alt="Image Not Available" width="30px" height="30px" class="img-rounded">
+		 </td>
+			
+	</tr>
+	</table>
+
+</div>
