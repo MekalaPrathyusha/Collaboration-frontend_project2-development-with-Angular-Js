@@ -5,33 +5,33 @@ app.controller('JobController', function($scope, $location, JobService) {
 	$scope.showdetails=true;
 	$scope.message=''
 	
-	$scope.saveJob = function() {
-		JobService.saveJob($scope.job).then(function(response) {
-			console.log('entering success function')
-			$location.path('/getalljobs')
-		}, function(response) {
-			console.log('entering error callback function')
-			$scope.message=response.data.message
-			if (response.status==401)
-				location.path('/login')
-			if (response.status==500)
-				$location.path('/savejob')
-
-		})
-
-	}
-	
 	function getAllJobs(){
 		
 		$scope.jobs=JobService.getAllJobs().then(function(response){
 			$scope.jobs=response.data;
 	}, function(response) {
 		$scope.message=response.data.message
-		location.path('/login')
-	})
+		$location.path('/login')
+	  })
 		
 	}
 	
+	$scope.saveJob = function() {
+		JobService.saveJob($scope.job).then(function(response) {
+			console.log('entering success function')
+			getAllJobs();
+			$location.path('/getalljobs')
+		}, function(response) {
+			console.log('entering error callback function')
+			$scope.message=response.data.message
+			if (response.status==401)
+				$location.path('/login')
+			if (response.status==500)
+				$location.path('/savejob')
+
+		})
+
+	}
 
 	$scope.getJobDetail=function(id) {
 		$scope.showdetails=true;
@@ -43,5 +43,5 @@ app.controller('JobController', function($scope, $location, JobService) {
 		
 	}
 	
-	getAllJobs;
+	getAllJobs();
 })
