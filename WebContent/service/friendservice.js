@@ -2,7 +2,7 @@
  * Friend Service
  */
 
-app.factory('FriendService',function($http) {
+app.factory('FriendService', function($http) {
 
 	var friendService={};
 
