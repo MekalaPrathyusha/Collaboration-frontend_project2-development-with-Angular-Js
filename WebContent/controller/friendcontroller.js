@@ -9,7 +9,7 @@ app.controller('FriendController', function($scope, $location, FriendService) {
 					$scope.suggestedUsers = response.data;
 
 				}, function(response) {
-					console.log(response.status)
+					console.log(response.status);
 				})
 	}
 
