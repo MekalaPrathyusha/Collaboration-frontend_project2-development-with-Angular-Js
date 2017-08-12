@@ -1,7 +1,27 @@
+<link rel="stylesheet" href="css/login.css">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <div>
 {{registrationSuccess}}
 	{{message}} {{error.message}}
-	<form name="loginForm" novalidate>
+	
+	<div class="sub-main-w3">	
+		<form action="#" method="post">
+			<input placeholder="Username" name="Name" ng-model="user.username" class="user" type="text" required=""><br>
+			<input placeholder="Password" name="Password" ng-model="user.password" class="pass" type="password" required=""><br>
+			<input type="submit" value="" ng-disabled="loginForm.$invalid" ng-click="login()" style="background-color:#b47c9f">
+		</form>
+	</div>
+	<!--  <form name="loginForm" novalidate>
 		Enter Username <input type="text" name="username" ng-model="user.username" required><br>
 		<p ng-show="loginForm.username.$invalid && loginForm.username.$dirty" style="color:red">Username cannot be blank</p>
 		
@@ -10,5 +30,5 @@
 		
 		<input type="submit" value="login" ng-disabled="loginForm.$invalid" ng-click="login()">
 
-	</form>
+	</form>-->
 </div>

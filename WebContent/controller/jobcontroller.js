@@ -2,7 +2,7 @@
  * job controller
  */
 app.controller('JobController', function($scope, $location, JobService) {
-	$scope.showdetails=true;
+	$scope.showdetails=false;
 	$scope.message=''
 	
 	function getAllJobs(){

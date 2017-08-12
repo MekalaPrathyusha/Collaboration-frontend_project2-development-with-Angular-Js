@@ -4,3 +4,7 @@ body {
     background-size: cover;
 	text-align:center;
 }
+
+h3.bg-primary{
+	background-color:#b47c9f;
+}

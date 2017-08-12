@@ -1,7 +1,10 @@
-<div>
+<link rel="stylesheet" href="css/jobtitles.css">
 
-Search By Title <input ng-model="searchText.title">
-Search By Author <input ng-model="searchText.author">
+<div>
+<div class="sub-main-w3">
+	<form>
+		<input type="text" id="search" ng-model="jobTitle" placeholder="search">
+	</form>
 
 	<table class="table">
 		<thead>
@@ -16,7 +19,7 @@ Search By Author <input ng-model="searchText.author">
 			</tr>
 		</tbody>
 	</table>
-	<div ng-show="showdetails">
+	<div ng-show="showdetails" style="color:#fff">
 	<b>Job Details</b><br>
 	<b>Job title :</b> {{job.jobTitle}}<br>
 	<b>Job Description :</b> {{job.jobDescription}}<br>
@@ -26,4 +29,5 @@ Search By Author <input ng-model="searchText.author">
 	<b>Salary :</b> {{job.salary}}<br>
 	<b>Company Name :</b> {{job.companyName}}<br>
 	</div>
+</div>
 </div>

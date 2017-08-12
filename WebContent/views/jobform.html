@@ -1,13 +1,23 @@
+<link rel="stylesheet" href="css/jobform.css">
+<div class="main-content-agile">
+		<div class="sub-main-w3">	
+			<div class="wthree-pro">
+				<h2>Job Form</h2>
+			</div>
 <span>{{message}}</span>
+<div class="pom-agile">
 <form name="jobform">
-	Enter Job Title <input type="text" ng-model="job.jobTitle"><br>
-	Enter Job Description <textarea ng-model="job.jobDescription"></textarea><br>
-	Enter Years Of Experience <input type="text" ng-model="job.yrsOfExp"><br>
-	Enter Salary <input type="text" ng-model="job.salary"><br>
-	Enter Skills Required <input type="text" ng-model="job.skillsRequired"><br>
-	Enter Location <input type="text" ng-model="job.location"><br>
-	Enter Company Name <input type="text" ng-model="job.companyName"><br>
-	
+	<input type="text" ng-model="job.jobTitle" placeholder="Job Title"><br>
+	<textarea ng-model="job.jobDescription" placeholder="Job Description"></textarea><br>
+	<input type="text" ng-model="job.yrsOfExp" placeholder="Yrs Of Experience"><br>
+	<input type="text" ng-model="job.salary" placeholder="Salary"><br>
+	<input type="text" ng-model="job.skillsRequired" placeholder="Skills Required"><br>
+	<input type="text" ng-model="job.location" placeholder="Location"><br>
+ 	<input type="text" ng-model="job.companyName" placeholder="Company Name"><br>
+	<br>
 	<input type="submit" value="saveJob" ng-click="saveJob()">
 	
 </form>
+</div>
+</div>
+</div>
