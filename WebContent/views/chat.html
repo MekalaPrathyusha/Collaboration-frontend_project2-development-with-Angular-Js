@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/chat.css">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,11 +9,16 @@
     <link href="assets/common/portfolio.css" rel="stylesheet">
   </head>
   <body>
+  
+  <div class="main-content-agile">
+		<div class="sub-main-w3">	
+   	
 
     <header class="container">
-      <div id="heading" class="masthead">
+      <div id="heading" class="masthead" style="color:#fff">
         
-        <h2>Chat <small>Online Chat Room</small></h2>
+        <h2>Chat </h2>
+        <small>Online Chat Room</small>
        
       </div>
    </header>
@@ -20,12 +26,11 @@
    <section class="main container">
      <div class="row">
     	<div class="col-md-12">
-	   		<p class="lead">Type in the box below to start a chat!</p>
+	   		<p class="lead">Type in the box below to start a chat!!</p>
 	   		
 	   	</div> 
      
      </div>
-   	
    	
    	<div class="row">
    		<div class="col-md-12">
@@ -34,7 +39,8 @@
           <div class="alert alert-info notification" id="joinedChat" ng-if="latestUser" ng-animate="{enter: 'fade', leave: 'fade'}">
             {{latestUser}} has joined the chat!
           </div>
-  			  <div class="form-group">
+          <div class="pom-agile">
+  			  <!--  <div class="form-group">-->
   			    <label for="to">Send To</label>
   			    <select class="form-control" id="to" name="to" ng-model="chat.to">
   			    	<option value="">Select Recipient</option>
@@ -42,19 +48,19 @@
   			    	<option ng-repeat="user in users" value="{{user}}">{{capitalize(user)}}</option>
   			    </select>
   			  </div>
-  			  <div class="form-group">
+  		 <div class="pom-agile">
+  			  <!--  <div class="form-group"> -->
   			    <label for="message">Message {{currentUser.username}}</label>
   			    <textarea class="form-control focus-on-click" name="message" placeholder="Message..." rows="3" ng-model="chat.message"></textarea>
   			  </div>
   			  <input type="submit" ng-focus="focus-on-click" name="send" class="btn btn-primary" value="Send.." />
-   			</form>
+  			  </div>
+   			<!--  </form> -->
    		
    		</div>
    	
-   	</div>
-   	
    	<div class="row">
-   		<div class="col-md-12" id="chats" >
+   		<div class="col-md-12" id="chats">
    			<div ng-repeat="chat in chats | reverse" class="chat {{chat.direction}}" ng-class="{'broadcast': chat.broadcast}">
           		<span class="from">
 		        	{{chat.from}}
@@ -64,12 +70,11 @@
 		    </div>
    		</div>
    		
-   	
    	</div>
-   	
- 
-   
+   	  
    </section>
+   </div>
+   </div>
    
     </body>
 </html>

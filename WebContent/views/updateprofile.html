@@ -1,16 +1,27 @@
-Update Details
+<link rel="stylesheet" href="css/updateprofile.css">
+<div class="main-content-agile">
+		<div class="sub-main-w3">	
+			<div class="wthree-pro">
+				<i><h2><i>Update Details</h2></i>
+			</div>
+<div class="pom-agile">
 <form>
-	Firstname: <input type="text" ng-model="userobj.firstname"><br>
-	Lastname: <input type="text" ng-model="userobj.lastname"><br>
-	Email: <input type="text" ng-model="userobj.email"><br>
-	Username: <input type="text" ng-model="userobj.username" disabled="true"><br>
-	Password: <input type="text" ng-model="userobj.password"><br>
-	Role <input type="radio" ng-model="userobj.role" value="Student">Student
-	<input type="radio" ng-model="userobj.role" value="Alumini">Alumini
-	<input type="radio" ng-model="userobj.role" value="Employee">Employee
-	<br> <input type="submit" ng-click="update()"><br>
-
-{{message))
+	<input type="text" ng-model="userobj.firstname" placeholder="Firstname"><br>
+	<input type="text" ng-model="userobj.lastname" placeholder="Lastname"><br>
+	<input type="text" ng-model="userobj.email" placeholder="Email"><br>
+	<input type="text" ng-model="userobj.username" placeholder="Username"><br>
+	<input type="text" ng-model="userobj.password" placeholder="Password"><br>
+	<br>
+	<label class="radio-inline" style="color:#fff">Select Role<br><br>
+	<input type="radio" ng-model="userobj.role" value="Student">Student<br>
+	<input type="radio" ng-model="userobj.role" value="Alumini">Alumini<br>
+	<input type="radio" ng-model="userobj.role" value="Employee">Employee<br>
+	</label>
+	<br>
+	<br> <input type="submit" value="Update" ng-click="update()"><br>
 
 </form>
+</div>
+</div>
+</div>
 

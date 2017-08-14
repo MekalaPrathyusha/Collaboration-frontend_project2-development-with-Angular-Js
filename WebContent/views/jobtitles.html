@@ -7,7 +7,7 @@
 	</form>
 
 	<table class="table">
-		<thead>
+		<thead style="color:#fff">
 			<tr>
 				<th>Job Title</th>
 				<th>Posted On</th>
@@ -15,7 +15,7 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="j in jobs | filter:jobTitle ">
-				<td><a href="" ng-click="getJobDetail(j.id)">{{j.jobTitle}}</a></td><td>{{j.postedOn | date:'yyyy:MM:dd'}}</td>
+				<td><a href="" ng-click="getJobDetail(j.id)">{{j.jobTitle}}</a></td><td style="color:#fff">{{j.postedOn | date:'yyyy:MM:dd'}}</td>
 			</tr>
 		</tbody>
 	</table>

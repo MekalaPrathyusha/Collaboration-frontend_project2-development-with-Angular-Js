@@ -1,10 +1,18 @@
-<div class="table-responsive" ng-show="currentUser.role=='Admin'">
-	List of Blog Posts waiting for approval
-	<table class="table">
-		<tr>
-			<th>Recent Posts></th>
-		</tr>
+<link rel="stylesheet" href="css/blogslist.css">
 
+<div class="column">
+<div class="col-sm-6">
+<div class="sub-main-w3">
+<div class="table-responsive" ng-show="currentUser.role=='Admin'">
+
+	<div class="wthree-pro" style="color:#fff">
+			<h1>List of Blog Posts Waiting For Approval</h1><br>
+				
+			<h5>Recent Posts</h5>	
+	</div>
+	<br>
+	<table class="table table-striped" style="background-color:#b47c9f">
+		
 		<tr
 			ng-repeat="blogPost in blogsWaitingForApproval | orderBy:'time':true">
 
@@ -15,13 +23,23 @@
 
 	</table>
 </div>
+</div>
+</div>
+</div>
 
+<div class="column">
+<div class="col-sm-6">
+<div class="sub-main-w3">
 <div class="table-responsive">
-	List of Blog Posts
-	<table class="table">
-		<tr>
-			<th>Recent Posts</th>
-		</tr>
+
+	<div class="wthree-pro" style="color:#fff">
+			<h1><i>List Of Blog Posts</i></h1><br>
+	
+			<h5>Recent Posts</h5>
+	</div>
+	<br>
+	<table class="table table-striped" style="background-color:#b47c9f">
+		
 
 		<tr ng-repeat="blogPost in blogsApproved | orderBy:'time':true">
 
@@ -31,6 +49,9 @@
 		</tr>
 
 	</table>
+</div>
+</div>
+</div>
 </div>
 
 
