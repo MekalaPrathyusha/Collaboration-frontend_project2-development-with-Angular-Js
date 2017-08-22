@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/approvalform.css">
+
 <div class="row">
 	<div>
 		<div class="panel panel-default">
@@ -10,8 +12,11 @@
 		</div>
 	</div>
 </div>
-<form>
-	<input type="radio" ng-model="blogPost.approved" value="true">Approve<br>
-	<input type="radio" ng-model="blogPost.approved" value="false">Reject<br>
-	<button ng-click="updateApproval()">Update Approval</button>
+<form style="color:#fff">
+	<input type="radio" ng-model="blogPost.approved" value="true"> Approve <br><br>
+<input type="radio" ng-model="blogPost.approved" value="false"> Reject <br><br>
+
+ <div class="make wow shake">
+	<button ng-click="updateApproval()" style="background-color:#b47c9f">Update Approval</button>
+</div>
 </form>
